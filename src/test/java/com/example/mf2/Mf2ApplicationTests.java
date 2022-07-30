@@ -21,8 +21,8 @@ class Mf2ApplicationTests {
 	EmployeeRepository employeeRepository;
 	@Test
 	void contextLoads() {
-		Assertions.assertNotNull(employeeController.getEmployeeList());
-		Assertions.assertNotNull(internController.getInternList());
+		Assertions.assertNotNull(employeeController.getEmployees());
+		Assertions.assertNotNull(internController.getInterns());
 	}
 	@Test
 	void ConnectionTesting(){

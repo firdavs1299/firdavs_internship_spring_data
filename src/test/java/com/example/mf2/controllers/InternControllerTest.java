@@ -14,6 +14,6 @@ class InternControllerTest {
     InternController internController;
     @Test
     void getInternList() {
-        Assertions.assertNotNull(internController.getInternList());
+        Assertions.assertNotNull(internController.getInterns());
     }
 }

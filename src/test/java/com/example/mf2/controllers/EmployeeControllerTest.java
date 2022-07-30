@@ -12,6 +12,6 @@ class EmployeeControllerTest {
     EmployeeController employeeController;
     @Test
     void getEmployeeList() {
-        Assertions.assertNotNull(employeeController.getEmployeeList());
+        Assertions.assertNotNull(employeeController.getEmployees());
     }
 }
