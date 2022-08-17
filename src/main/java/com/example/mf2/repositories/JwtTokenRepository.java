@@ -67,6 +67,7 @@ public class JwtTokenRepository implements CsrfTokenRepository {
 
     @Override
     public CsrfToken loadToken(HttpServletRequest request) {
+        System.out.println(request.getHeader("Authorization"));
         return (CsrfToken) request.getAttribute(CsrfToken.class.getName());
     }
 

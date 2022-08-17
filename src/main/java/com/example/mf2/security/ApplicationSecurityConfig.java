@@ -21,6 +21,7 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 
 @Configuration
 @EnableWebSecurity
+
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final PasswordEncoder passwordEncoder;
@@ -69,8 +70,10 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().ignoringAntMatchers("/**")
                 .and()
                 .authorizeRequests()
+
                 .antMatchers("/auth/login")
                 .authenticated()
+
                 .and()
                 .httpBasic()
                 .authenticationEntryPoint(((request, response, e) -> resolver.resolveException(request, response, null, e)));
